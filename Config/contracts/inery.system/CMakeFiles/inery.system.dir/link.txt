@@ -1,0 +1,1 @@
+/petar/novoting/inery.cdt/build/bin/inery-ld  CMakeFiles/inery.system.dir/src/inery.system.cpp.obj CMakeFiles/inery.system.dir/src/delegate_bandwidth.cpp.obj CMakeFiles/inery.system.dir/src/exchange_state.cpp.obj CMakeFiles/inery.system.dir/src/native.cpp.obj CMakeFiles/inery.system.dir/src/consensus.cpp.obj -o inery.system.wasm 

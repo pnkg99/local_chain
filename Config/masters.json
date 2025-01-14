@@ -1,0 +1,90 @@
+[
+      {
+            "NAME": "master1",
+            "PUBLIC_KEY": "INE7x5HUXLfGgVs6g9bN6TSUftVJDmhFAAEo36SSnnSZoBqaGNxKx",
+            "PRIVATE_KEY": "5JgJRuwjkgcbmxN4S6eDoo6xfYZjLuQC6sgMbXFQFnNFMs9junJ",
+            "PEER_ADDRESS": "bis.blockchain-servers.world:9011",
+            "HTTP_ADDRESS": "0.0.0.0:8100",
+            "HOST_ADDRESS": "0.0.0.0:9011"
+      },
+      {
+            "NAME": "master2",
+            "PUBLIC_KEY": "INE5bD3gm5LrAEzwoVxy8tpviuw8HaF8aQhVMvwvQKmPpVTEwCJRD",
+            "PRIVATE_KEY": "5JXSMBb9AoFv6J5Ru1aotty8FMdnCR8QkiwRy9Ku4Zftt4eJgM6",
+            "PEER_ADDRESS": "bis.blockchain-servers.world:9012",
+            "HTTP_ADDRESS": "0.0.0.0:8102",
+            "HOST_ADDRESS": "0.0.0.0:9012"
+      },
+      {
+            "NAME": "master3",
+            "PUBLIC_KEY": "INE7wLc3TbgzkDG4D86rqco7EDFgoge6xWmF3tjPMPZsJXWaZX5o4",
+            "PRIVATE_KEY": "5KJhVc2gqDCwx1uAgrZTHr93RgRteaqutbbvZAdpzJro8TDq1iD",
+            "PEER_ADDRESS": "bis.blockchain-servers.world:9013",
+            "HTTP_ADDRESS": "0.0.0.0:8104",
+            "HOST_ADDRESS": "0.0.0.0:9013"
+      },
+      {
+            "NAME": "master4",
+            "PUBLIC_KEY": "INE5sCGW2FNmexDxtJRQJDYkUCHCzoKRaT5T8EVBuXsUbcvErnNwN",
+            "PRIVATE_KEY": "5KVijdqqJovyQGmA5qm9EpeEzvZ2GeWmc15LiqPhCFGV8AgjwWb",
+            "PEER_ADDRESS": "bis.blockchain-servers.world:9014",
+            "HTTP_ADDRESS": "0.0.0.0:8106",
+            "HOST_ADDRESS": "0.0.0.0:9014"
+      },
+      {
+            "NAME": "master5",
+            "PUBLIC_KEY": "INE5ogE45Awr1G1nfQ1cJVvBUzKFAwKH1WJ2AuQcTuug96qfoJ82P",
+            "PRIVATE_KEY": "5JG6hQfAu71g4xYwgqAmhyrPYD9oS8UTHCiFBgypXdPB1SnxKto",
+            "PEER_ADDRESS": "bis.blockchain-servers.world:9015",
+            "HTTP_ADDRESS": "0.0.0.0:8108",
+            "HOST_ADDRESS": "0.0.0.0:9015"
+      },
+      {
+            "NAME": "master11",
+            "PUBLIC_KEY": "INE7Ji8unktKXhQvaTngAhTs3k9Y8MfEkULtURwUnwxMbg5zcLEuV",
+            "PRIVATE_KEY": "5KKD6TC1Rkq5VzPe4Rgvx4NZw38zSJ3oFYKDbmPxAaQ4tHhHgBQ",
+            "PEER_ADDRESS": "bis.blockchain-servers.world:9016",
+            "HTTP_ADDRESS": "0.0.0.0:8110",
+            "HOST_ADDRESS": "0.0.0.0:9016"
+      },
+      {
+            "NAME": "master12",
+            "PUBLIC_KEY": "INE8ZfPiKHuX4tSFfCve81bvStXZ8iZJD1Gz48cQnv3WvmWmCVcTr",
+            "PRIVATE_KEY": "5JsE7eJePLWExNG7TikSpugPorYKeWcKYLbCTbZ76vddmQi8HZx",
+            "PEER_ADDRESS": "bis.blockchain-servers.world:9017",
+            "HTTP_ADDRESS": "0.0.0.0:8112",
+            "HOST_ADDRESS": "0.0.0.0:9017"
+      },
+      {
+            "NAME": "master13",
+            "PUBLIC_KEY": "INE5bDdYwfMGD1CgroJMvVHMrFutLEhqGiai9EGjqLgx1LufVkWwZ",
+            "PRIVATE_KEY": "5KiZMA7c3WsWhiyUkR96PBvwDGBWLHmt7LZaTroH17QE8DZNVkT",
+            "PEER_ADDRESS": "bis.blockchain-servers.world:9018",
+            "HTTP_ADDRESS": "0.0.0.0:8114",
+            "HOST_ADDRESS": "0.0.0.0:9018"
+      },
+      {
+            "NAME": "master14",
+            "PUBLIC_KEY": "INE4w1FZUrLTMQhNRL9m9XowWHnjpoye7Sx1Mkj5UnQMJRujiDzwQ",
+            "PRIVATE_KEY": "5KdjgqiHNLDoVkHJwQFgTHAJ8vTWqBD9vcdjQAmtQe2qevyjxCM",
+            "PEER_ADDRESS": "bis.blockchain-servers.world:9019",
+            "HTTP_ADDRESS": "0.0.0.0:8116",
+            "HOST_ADDRESS": "0.0.0.0:9019"
+      },
+      {
+            "NAME": "master15",
+            "PUBLIC_KEY": "INE87EH7QsFfkPbE45ZVwN7PX3zUzZvmZ9mhDT5vMbHuvq33j2yNM",
+            "PRIVATE_KEY": "5JkPUVk7ryfbFS6EDVZDPtaDjTjhUEVgCfcs1d9jSkCtbV8gQah",
+            "PEER_ADDRESS": "bis.blockchain-servers.world:9020",
+            "HTTP_ADDRESS": "0.0.0.0:8118",
+            "HOST_ADDRESS": "0.0.0.0:9020"
+      },
+      {
+            "NAME": "master21",
+            "PUBLIC_KEY": "INE7uxh2HhVTno29beKtioUHChLFEkQw5hS9Cm38bJHRoGZb4v1Dc",
+            "PRIVATE_KEY": "5HqWWtc9ZxaJohRrtufPA8fU8eLCZ7XkgL7ty9an5kgmvP659Tt",
+            "PEER_ADDRESS": "bis.blockchain-servers.world:9382",
+            "HTTP_ADDRESS": "0.0.0.0:8842",
+            "HOST_ADDRESS": "0.0.0.0:9382"
+      }
+]

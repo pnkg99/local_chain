@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/petar/novoting/inery.contracts/contracts/inery.wrap/include/inery.wrap/inery.wrap.hpp
+inery/inery.hpp
+-
+inery/ignore.hpp
+-
+inery/transaction.hpp
+-
+
+/petar/novoting/inery.contracts/contracts/inery.wrap/src/inery.wrap.cpp
+inery.wrap/inery.wrap.hpp
+-
+

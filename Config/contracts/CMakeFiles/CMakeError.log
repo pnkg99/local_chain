@@ -1,0 +1,82 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /petar/novoting/inery.cdt/build/bin/inery-cc 
+Build flags: -O3
+Id flags:  
+
+The output was:
+255
+wasm-ld: error: fatal failure: contract with no actions and trying to create dispatcher
+Exit due to wasm-ld failure
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /petar/novoting/inery.cdt/build/bin/inery-cpp 
+Build flags: -O3
+Id flags:  
+
+The output was:
+255
+wasm-ld: error: fatal failure: contract with no actions and trying to create dispatcher
+Exit due to wasm-ld failure
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /petar/novoting/inery.contracts/build/contracts/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d778b/fast && make[3]: Entering directory '/petar/novoting/inery.contracts/build/contracts/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_d778b.dir/build.make CMakeFiles/cmTC_d778b.dir/build
+make[4]: Entering directory '/petar/novoting/inery.contracts/build/contracts/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d778b.dir/CMakeCCompilerABI.c.obj
+/petar/novoting/inery.cdt/build/bin/inery-cc   -O3    -v -o CMakeFiles/cmTC_d778b.dir/CMakeCCompilerABI.c.obj   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+clang version 9.0.1 (https://github.com/inery/clang.git 6a2b43d5cb01f666af0dbfb31a3cbf2e17967909) (https://github.com/inery/llvm d700c78db1918c7a2783c37a97d42d6fcd223e4d)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /usr/local/inery.cdt/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/11
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+Linking C executable cmTC_d778b.wasm
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d778b.dir/link.txt --verbose=1
+/petar/novoting/inery.cdt/build/bin/inery-ld  -v CMakeFiles/cmTC_d778b.dir/CMakeCCompilerABI.c.obj -o cmTC_d778b.wasm 
+inery-ld: Unknown command line argument '-v'.  Try: '/petar/novoting/inery.cdt/build/bin/inery-ld --help'
+inery-ld: Did you mean '  -L'?
+make[4]: *** [CMakeFiles/cmTC_d778b.dir/build.make:87: cmTC_d778b.wasm] Error 1
+make[4]: Leaving directory '/petar/novoting/inery.contracts/build/contracts/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_d778b/fast] Error 2
+make[3]: Leaving directory '/petar/novoting/inery.contracts/build/contracts/CMakeFiles/CMakeTmp'
+
+
+
+
+Detecting CXX compiler ABI info failed to compile with the following output:
+Change Dir: /petar/novoting/inery.contracts/build/contracts/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_43e71/fast && make[3]: Entering directory '/petar/novoting/inery.contracts/build/contracts/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_43e71.dir/build.make CMakeFiles/cmTC_43e71.dir/build
+make[4]: Entering directory '/petar/novoting/inery.contracts/build/contracts/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_43e71.dir/CMakeCXXCompilerABI.cpp.obj
+/petar/novoting/inery.cdt/build/bin/inery-cpp    -O3    -v -o CMakeFiles/cmTC_43e71.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+clang version 9.0.1 (https://github.com/inery/clang.git 6a2b43d5cb01f666af0dbfb31a3cbf2e17967909) (https://github.com/inery/llvm d700c78db1918c7a2783c37a97d42d6fcd223e4d)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /usr/local/inery.cdt/bin
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/11
+Found candidate GCC installation: /usr/lib/gcc/x86_64-linux-gnu/9
+Selected GCC installation: /usr/lib/gcc/x86_64-linux-gnu/11
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+Linking CXX executable cmTC_43e71.wasm
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43e71.dir/link.txt --verbose=1
+/petar/novoting/inery.cdt/build/bin/inery-ld  -v CMakeFiles/cmTC_43e71.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_43e71.wasm 
+inery-ld: Unknown command line argument '-v'.  Try: '/petar/novoting/inery.cdt/build/bin/inery-ld --help'
+inery-ld: Did you mean '  -L'?
+make[4]: *** [CMakeFiles/cmTC_43e71.dir/build.make:87: cmTC_43e71.wasm] Error 1
+make[4]: Leaving directory '/petar/novoting/inery.contracts/build/contracts/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_43e71/fast] Error 2
+make[3]: Leaving directory '/petar/novoting/inery.contracts/build/contracts/CMakeFiles/CMakeTmp'
+
+
+
+

@@ -1,0 +1,8 @@
+{
+    "server_url": "bis.blockchain-servers.world",
+    "dev_keys": {
+        "PUBLIC_KEY": "INE7x5HUXLfGgVs6g9bN6TSUftVJDmhFAAEo36SSnnSZoBqaGNxKx",
+        "PRIVATE_KEY": "5JgJRuwjkgcbmxN4S6eDoo6xfYZjLuQC6sgMbXFQFnNFMs9junJ"
+    },
+    "max_masters": 5
+}

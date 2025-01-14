@@ -1,0 +1,72 @@
+[
+    {
+        "NAME": "inery.bpay",
+        "PUBLIC_KEY": "INE7x5HUXLfGgVs6g9bN6TSUftVJDmhFAAEo36SSnnSZoBqaGNxKx",
+        "PRIVATE_KEY": "5JgJRuwjkgcbmxN4S6eDoo6xfYZjLuQC6sgMbXFQFnNFMs9junJ"
+    },
+    {
+        "NAME": "inery.msig",
+        "PRIVATE_KEY": "5JPttrUYhCm1hKYheusmC2zHPD2wM69uQQik9x6z57wyg1ELJmt",
+        "PUBLIC_KEY": "INE5oauhzSCTyd2jJ79guuKmCGdinLxUtXZyddQWVqVirB6ThytZ4"
+    },
+    {
+        "NAME": "inery.names",
+        "PRIVATE_KEY": "5JB1LTeDXSB5F5Xuox2z795wGzhxtD3pPwEK5WVNcGb7TL1QfSu",
+        "PUBLIC_KEY": "INE8kBLFoZhrnpCV9gNgY1DEeYruxBPZbELR1dE4Mt9RoSoahoFLi"
+    },
+    {
+        "NAME": "inery.ram",
+        "PRIVATE_KEY": "5K9Jp7uZ6jcFJVPkhRbYfD4zFyLMixfYo3jmqR3kxtuTXG2avB2",
+        "PUBLIC_KEY": "INE7qyUF4hW838d8HEWQFemWvWPF3gPtG4ehinXs1kGkqb5c9j38n"
+    },
+    {
+        "NAME": "inery.ramfee",
+        "PRIVATE_KEY": "5Kct1aRac854KH6XDhAiPyYzp5DMzBhzhj2nanedNHVN3PSn7NR",
+        "PUBLIC_KEY": "INE8AWACG1GFSv9Wq3qM4okrZMuKjfcmGmnWbHKxJBEDzaY4upZmQ"
+    },
+    {
+        "NAME": "inery.saving",
+        "PRIVATE_KEY": "5KfiJyvgAVns28W1whAMApkoatvC6MJMBLn3Y9VgLK2TAx1WFvs",
+        "PUBLIC_KEY": "INE573eJ22w2BZE4W9SwAut9afw4czUTnxsD8CubZySq6Vjt2eyVA"
+    },
+    {
+        "NAME": "inery.stake",
+        "PRIVATE_KEY": "5KLLhGXdsGcs6EGug368yyJkyxiZnRNSQhWTuUr4sVuaPALzq6c",
+        "PUBLIC_KEY": "INE8aMaaaazh72CNf2yriSfTaSmqKBwnUFZFKbd8Y6FEqnYyXUtJA"
+    },
+    {
+        "NAME": "inery.token",
+        "PRIVATE_KEY": "5K5zagomga9xt3VmUa3r2NmXM2rNqXzHUiqJR4SFvXZhs564vX9",
+        "PUBLIC_KEY": "INE7vZmiLWVU6VZH49TvAKmBDTTPgnyn92xv8d1rKKhDXZbDaGep2"
+    },
+    {
+        "NAME": "inery.vpay",
+        "PRIVATE_KEY": "5KfGnctBkWZq4iAAK9Lwz7PQv2S43ThUN6TPP594kdD3aCqpURt",
+        "PUBLIC_KEY": "INE4vkos4UppzNcE2bLZFtf5MCAfTEsWcsN31H85S5JqfDa1RoVyk"
+    },
+    {
+        "NAME": "inery.wrap",
+        "PRIVATE_KEY": "5JRDr3FbBVA6aVqvfGKAzF8abQYEarWwFyEcXyqdJp9eQ23A645",
+        "PUBLIC_KEY": "INE6eYLJ5ozm25dchmjGCZRDMKxcbDafjayCv47RJSgadaektxNfT"
+    },
+    {
+        "NAME": "inery.rex",
+        "PRIVATE_KEY": "5J5DAVQbhVjBSbJoB2QeMFKJ81ebG6CxeTNaoEPFLjHFJJGeM29",
+        "PUBLIC_KEY": "INE6RYXNPUnn7YLReeuWF8FMR76oaAMVNmKNnzJR82wkbkYyqGUvC"
+    },
+    {
+        "NAME": "inery.reserv",
+        "PRIVATE_KEY": "5HsZTp2wNBX8Uhd6qBgNYUa7BSodh8uUeUXTNTqpWExqcoU5BPa",
+        "PUBLIC_KEY": "INE8Xu9GD1MdqdtJ8Ba9TpA25yKbK45kmyDpt2rfepiavnRii6nZg"
+    },
+    {
+        "NAME": "inerygui",
+        "PRIVATE_KEY": "5KfiJyvgAVns28W1whAMApkoatvC6MJMBLn3Y9VgLK2TAx1WFvs",
+        "PUBLIC_KEY": "INE573eJ22w2BZE4W9SwAut9afw4czUTnxsD8CubZySq6Vjt2eyVA"
+    },
+    {
+        "NAME": "k2ultra",
+        "PRIVATE_KEY": "5KfiJyvgAVns28W1whAMApkoatvC6MJMBLn3Y9VgLK2TAx1WFvs",
+        "PUBLIC_KEY": "INE573eJ22w2BZE4W9SwAut9afw4czUTnxsD8CubZySq6Vjt2eyVA"
+    }
+]

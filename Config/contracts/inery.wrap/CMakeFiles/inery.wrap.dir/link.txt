@@ -1,0 +1,1 @@
+/petar/novoting/inery.cdt/build/bin/inery-ld  CMakeFiles/inery.wrap.dir/src/inery.wrap.cpp.obj -o inery.wrap.wasm 
