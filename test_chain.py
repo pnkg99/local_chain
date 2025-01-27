@@ -99,7 +99,7 @@ class TestChain:
         self.bashrc_path = os.path.join(self.home_path, '.bashrc')
         self.wallet_path = os.path.join(self.home_path, "inery-wallet")
         self.default_wallet_path = os.path.join(self.wallet_path, "default.wallet")
-        self.inery_bin_path = os.path.join(self.path, "Packages", "inery")
+        self.inery_bin_path = os.path.join(self.path, "Packages", "inery", "bin")
         self.inery_nodine_path = "nodine"
         self.inery_cline_path =  "cline"
         self.inery_kined_path =  "kined"
@@ -253,7 +253,6 @@ class TestChain:
         
         print("Blockchain started")
         time.sleep(1)
-
         try:
 
             os.popen('curl --request POST --url http://127.0.0.1:8888/v1/master/schedule_protocol_feature_activations -d \'{"protocol_features_to_activate":["0ec7e080177b2c02b278d5088611686b49d739925a92d9bfcacd7fc6b74053bd"]}\'').read()
@@ -422,7 +421,8 @@ class TestChain:
         if peers:
             script = self.add_peer_addresses(script, port)
         if genesis:
-            script = self.add_https_configuration(script)
+            pass
+            #script = self.add_https_configuration(script)
 
         return script
     
