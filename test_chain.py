@@ -150,15 +150,12 @@ class TestChain:
         s = subprocess.Popen([self.inery_cline_path, "wallet", "list"], stdout=subprocess.PIPE).communicate()[0].decode()
         first_open = s.find("[")
         last_close = s.rfind("]")
-        self.create_wallet()
-        return
         if first_open != -1 and last_close != -1 and first_open < last_close:
             try :
                 s = s[first_open + 1:last_close-1]
                 wallets = s.replace('"', "").replace(",", "").split()
                 if "default *" in wallets :
-                    print("A")
-                    exit()
+                    print("Wallet exists and its unlocked")
                     return
                 elif "default" in wallets :                  
                     self.unlock_wallet()
@@ -256,6 +253,7 @@ class TestChain:
         
         print("Blockchain started")
         time.sleep(1)
+        exit(1)
         try:
 
             os.popen('curl --request POST --url http://127.0.0.1:8888/v1/master/schedule_protocol_feature_activations -d \'{"protocol_features_to_activate":["0ec7e080177b2c02b278d5088611686b49d739925a92d9bfcacd7fc6b74053bd"]}\'').read()
@@ -281,9 +279,11 @@ class TestChain:
             for feature in self.features:
                 subprocess.Popen([self.inery_cline_path, "push", "action", "inery", "activate" , f"[\"{feature}\"]", "-p", "inery"]).communicate()[0]
             
-            while True  : 
+            i = 0
+            while i < 20  : 
                 result = subprocess.Popen([self.inery_cline_path, "set", "contract", "inery", f"{self.system_path}"], stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
                 error = str(result[1])
+                i+=1
                 if "transaction executed locally" in error or "the new code is the same as the existing" in error :
                     break
                 if error:
