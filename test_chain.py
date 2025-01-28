@@ -150,6 +150,8 @@ class TestChain:
         s = subprocess.Popen([self.inery_cline_path, "wallet", "list"], stdout=subprocess.PIPE).communicate()[0].decode()
         first_open = s.find("[")
         last_close = s.rfind("]")
+        self.create_wallet()
+        return
         if first_open != -1 and last_close != -1 and first_open < last_close:
             try :
                 s = s[first_open + 1:last_close-1]
@@ -161,6 +163,7 @@ class TestChain:
                 elif "default" in wallets :                  
                     self.unlock_wallet()
                 else :
+                    print("Creating Wallet...")
                     self.create_wallet()
             except Exception as e :
                 print(e)
@@ -233,7 +236,7 @@ class TestChain:
     def run_chain(self) :
         self.check_default_wallet()
         self.run_genesis()
-        self.run_masters()
+        #self.run_masters()
 
     def run_genesis(self) -> None:
         
