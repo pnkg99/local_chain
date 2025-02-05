@@ -253,7 +253,6 @@ class TestChain:
         
         print("Blockchain started")
         time.sleep(1)
-        exit(1)
         try:
 
             os.popen('curl --request POST --url http://127.0.0.1:8888/v1/master/schedule_protocol_feature_activations -d \'{"protocol_features_to_activate":["0ec7e080177b2c02b278d5088611686b49d739925a92d9bfcacd7fc6b74053bd"]}\'').read()
