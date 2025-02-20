@@ -1,0 +1,678 @@
+{
+    "____comment": "This file was generated with inery-abigen. DO NOT EDIT ",
+    "version": "inery::abi/1.2",
+    "types": [],
+    "structs": [
+        {
+            "name": "addadr",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "adresses",
+            "base": "",
+            "fields": [
+                {
+                    "name": "scope",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "blockcontact",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "contact",
+                    "type": "name"
+                },
+                {
+                    "name": "status",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "changealias",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "contact",
+                    "type": "name"
+                },
+                {
+                    "name": "alias",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "changepsw",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "password",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "changersa",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "rsa_pub",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "deletemesgs",
+            "base": "",
+            "fields": [
+                {
+                    "name": "scope",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "deletereqs",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "deletereqs2",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "contact",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "deleteuser",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "favcontact",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "contact",
+                    "type": "name"
+                },
+                {
+                    "name": "status",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "forcerequest",
+            "base": "",
+            "fields": [
+                {
+                    "name": "scope",
+                    "type": "uint64"
+                },
+                {
+                    "name": "cnt1",
+                    "type": "name"
+                },
+                {
+                    "name": "cnt2",
+                    "type": "name"
+                },
+                {
+                    "name": "key1",
+                    "type": "string"
+                },
+                {
+                    "name": "key2",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "getunseen",
+            "base": "",
+            "fields": [
+                {
+                    "name": "scope",
+                    "type": "uint64"
+                },
+                {
+                    "name": "sender",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "getuserbyhash",
+            "base": "",
+            "fields": [
+                {
+                    "name": "s",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "login",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "messages",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "time",
+                    "type": "time_point"
+                },
+                {
+                    "name": "sender",
+                    "type": "name"
+                },
+                {
+                    "name": "reply_to",
+                    "type": "uint64"
+                },
+                {
+                    "name": "seen",
+                    "type": "uint64"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "mutecontact",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "contact",
+                    "type": "name"
+                },
+                {
+                    "name": "status",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "profiles",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "official_name",
+                    "type": "string"
+                },
+                {
+                    "name": "password",
+                    "type": "string"
+                },
+                {
+                    "name": "twordhash",
+                    "type": "uint64"
+                },
+                {
+                    "name": "rsa_pub",
+                    "type": "string"
+                },
+                {
+                    "name": "requests",
+                    "type": "name[]"
+                },
+                {
+                    "name": "contacts",
+                    "type": "name[]"
+                },
+                {
+                    "name": "favorites",
+                    "type": "name[]"
+                },
+                {
+                    "name": "blocked",
+                    "type": "name[]"
+                },
+                {
+                    "name": "pending",
+                    "type": "name[]"
+                }
+            ]
+        },
+        {
+            "name": "pump",
+            "base": "",
+            "fields": [
+                {
+                    "name": "max",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "pushmsg",
+            "base": "",
+            "fields": [
+                {
+                    "name": "scope",
+                    "type": "name"
+                },
+                {
+                    "name": "sender",
+                    "type": "name"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                },
+                {
+                    "name": "reply_to",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "reguser",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "password",
+                    "type": "string"
+                },
+                {
+                    "name": "twordhash",
+                    "type": "string"
+                },
+                {
+                    "name": "rsa_pub",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "requests",
+            "base": "",
+            "fields": [
+                {
+                    "name": "scope",
+                    "type": "uint64"
+                },
+                {
+                    "name": "contact",
+                    "type": "name"
+                },
+                {
+                    "name": "alias",
+                    "type": "string"
+                },
+                {
+                    "name": "key",
+                    "type": "string"
+                },
+                {
+                    "name": "cntct",
+                    "type": "bool"
+                },
+                {
+                    "name": "favorite",
+                    "type": "bool"
+                },
+                {
+                    "name": "blocked",
+                    "type": "bool"
+                },
+                {
+                    "name": "muted",
+                    "type": "bool"
+                },
+                {
+                    "name": "pending",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "resprequest",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "key",
+                    "type": "string"
+                },
+                {
+                    "name": "accept",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "rmcontact",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "contact",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "rraddr",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "rrprofiles",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "seenmsg",
+            "base": "",
+            "fields": [
+                {
+                    "name": "scope",
+                    "type": "uint64"
+                },
+                {
+                    "name": "receiver",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "sendmsg",
+            "base": "",
+            "fields": [
+                {
+                    "name": "scope",
+                    "type": "uint64"
+                },
+                {
+                    "name": "sender",
+                    "type": "name"
+                },
+                {
+                    "name": "data",
+                    "type": "string"
+                },
+                {
+                    "name": "reply_to",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "sendrequest",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "key",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "setoffname",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "official_name",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "addadr",
+            "type": "addadr",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "blockcontact",
+            "type": "blockcontact",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "changealias",
+            "type": "changealias",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "changepsw",
+            "type": "changepsw",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "changersa",
+            "type": "changersa",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "deletemesgs",
+            "type": "deletemesgs",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "deletereqs",
+            "type": "deletereqs",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "deletereqs2",
+            "type": "deletereqs2",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "deleteuser",
+            "type": "deleteuser",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "favcontact",
+            "type": "favcontact",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "forcerequest",
+            "type": "forcerequest",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "getunseen",
+            "type": "getunseen",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "getuserbyhash",
+            "type": "getuserbyhash",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "login",
+            "type": "login",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "mutecontact",
+            "type": "mutecontact",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "pump",
+            "type": "pump",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "pushmsg",
+            "type": "pushmsg",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "reguser",
+            "type": "reguser",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "resprequest",
+            "type": "resprequest",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmcontact",
+            "type": "rmcontact",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rraddr",
+            "type": "rraddr",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rrprofiles",
+            "type": "rrprofiles",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "seenmsg",
+            "type": "seenmsg",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "sendmsg",
+            "type": "sendmsg",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "sendrequest",
+            "type": "sendrequest",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setoffname",
+            "type": "setoffname",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "adresses",
+            "type": "adresses",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "messages",
+            "type": "messages",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "profiles",
+            "type": "profiles",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "requests",
+            "type": "requests",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "kv_tables": {},
+    "ricardian_clauses": [],
+    "variants": [],
+    "action_results": []
+}

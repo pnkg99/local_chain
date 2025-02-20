@@ -1,0 +1,692 @@
+{
+    "____comment": "This file was generated with inery-abigen. DO NOT EDIT ",
+    "version": "inery::abi/1.2",
+    "types": [],
+    "structs": [
+        {
+            "name": "addaccount",
+            "base": "",
+            "fields": [
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "addhistory",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "composition",
+                    "type": "name"
+                },
+                {
+                    "name": "object",
+                    "type": "history_object"
+                },
+                {
+                    "name": "type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "addpluging",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "plugin_name",
+                    "type": "string"
+                },
+                {
+                    "name": "plugin_desc",
+                    "type": "string"
+                },
+                {
+                    "name": "required",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "addpluginu",
+            "base": "",
+            "fields": [
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "plugin_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "addserver",
+            "base": "",
+            "fields": [
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "server",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "addtemplateg",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "category_name",
+                    "type": "string"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "desc",
+                    "type": "string"
+                },
+                {
+                    "name": "code",
+                    "type": "name"
+                },
+                {
+                    "name": "rate_score",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "addtemplateu",
+            "base": "",
+            "fields": [
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "template_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "addtwords",
+            "base": "",
+            "fields": [
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "twords",
+                    "type": "checksum256[]"
+                }
+            ]
+        },
+        {
+            "name": "adduser",
+            "base": "",
+            "fields": [
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "password",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "version",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "checkoff",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account_name",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "global_info",
+            "base": "",
+            "fields": [
+                {
+                    "name": "version",
+                    "type": "string"
+                },
+                {
+                    "name": "templates",
+                    "type": "tmplt[]"
+                },
+                {
+                    "name": "plugins",
+                    "type": "plugin[]"
+                }
+            ]
+        },
+        {
+            "name": "history",
+            "base": "",
+            "fields": [
+                {
+                    "name": "composition",
+                    "type": "name"
+                },
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "createhistory",
+                    "type": "history_object[]"
+                },
+                {
+                    "name": "updatehistory",
+                    "type": "history_object[]"
+                },
+                {
+                    "name": "deletehistory",
+                    "type": "history_object[]"
+                }
+            ]
+        },
+        {
+            "name": "history_object",
+            "base": "",
+            "fields": [
+                {
+                    "name": "block_num",
+                    "type": "uint64"
+                },
+                {
+                    "name": "transaction_id",
+                    "type": "string"
+                },
+                {
+                    "name": "time_executed",
+                    "type": "time_point"
+                }
+            ]
+        },
+        {
+            "name": "linkperm",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "composition",
+                    "type": "name"
+                },
+                {
+                    "name": "perm_name",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "permissions",
+            "base": "",
+            "fields": [
+                {
+                    "name": "composition",
+                    "type": "name"
+                },
+                {
+                    "name": "perm_name",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "plugin",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "required",
+                    "type": "bool"
+                },
+                {
+                    "name": "plugin_name",
+                    "type": "string"
+                },
+                {
+                    "name": "plugin_desc",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "recoverpsw",
+            "base": "",
+            "fields": [
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "twords",
+                    "type": "checksum256[]"
+                },
+                {
+                    "name": "newpassword",
+                    "type": "checksum256"
+                }
+            ]
+        },
+        {
+            "name": "rmaccount",
+            "base": "",
+            "fields": [
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "rmpluging",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "rmpluginu",
+            "base": "",
+            "fields": [
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "plugin_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "rmserver",
+            "base": "",
+            "fields": [
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "server",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "rmtemplateu",
+            "base": "",
+            "fields": [
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "template_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "rmusers",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "sti",
+            "base": "",
+            "fields": [
+                {
+                    "name": "s",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "tmplt",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "category_name",
+                    "type": "string"
+                },
+                {
+                    "name": "template_name",
+                    "type": "string"
+                },
+                {
+                    "name": "template_desc",
+                    "type": "string"
+                },
+                {
+                    "name": "code",
+                    "type": "name"
+                },
+                {
+                    "name": "rate_score",
+                    "type": "uint64"
+                },
+                {
+                    "name": "date_created",
+                    "type": "time_point"
+                }
+            ]
+        },
+        {
+            "name": "turnofplugin",
+            "base": "",
+            "fields": [
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "plugin_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "turnonplugin",
+            "base": "",
+            "fields": [
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "plugin_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "upversiong",
+            "base": "",
+            "fields": [
+                {
+                    "name": "version",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "upversionu",
+            "base": "",
+            "fields": [
+                {
+                    "name": "guiname",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "user",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "guiname",
+                    "type": "string"
+                },
+                {
+                    "name": "password",
+                    "type": "checksum256"
+                },
+                {
+                    "name": "twords",
+                    "type": "checksum256[]"
+                },
+                {
+                    "name": "accounts",
+                    "type": "name[]"
+                },
+                {
+                    "name": "servers",
+                    "type": "string[]"
+                },
+                {
+                    "name": "templates",
+                    "type": "uint64[]"
+                },
+                {
+                    "name": "plugins",
+                    "type": "user_plugin[]"
+                },
+                {
+                    "name": "version",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "user_plugin",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "active",
+                    "type": "bool"
+                },
+                {
+                    "name": "last_time_used",
+                    "type": "time_point"
+                }
+            ]
+        },
+        {
+            "name": "waversion",
+            "base": "",
+            "fields": []
+        }
+    ],
+    "actions": [
+        {
+            "name": "addaccount",
+            "type": "addaccount",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addhistory",
+            "type": "addhistory",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addpluging",
+            "type": "addpluging",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addpluginu",
+            "type": "addpluginu",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addserver",
+            "type": "addserver",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addtemplateg",
+            "type": "addtemplateg",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addtemplateu",
+            "type": "addtemplateu",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addtwords",
+            "type": "addtwords",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "adduser",
+            "type": "adduser",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "checkoff",
+            "type": "checkoff",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "linkperm",
+            "type": "linkperm",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "recoverpsw",
+            "type": "recoverpsw",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmaccount",
+            "type": "rmaccount",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmpluging",
+            "type": "rmpluging",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmpluginu",
+            "type": "rmpluginu",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmserver",
+            "type": "rmserver",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmtemplateu",
+            "type": "rmtemplateu",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rmusers",
+            "type": "rmusers",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "sti",
+            "type": "sti",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "turnofplugin",
+            "type": "turnofplugin",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "turnonplugin",
+            "type": "turnonplugin",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "upversiong",
+            "type": "upversiong",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "upversionu",
+            "type": "upversionu",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "waversion",
+            "type": "waversion",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "global",
+            "type": "global_info",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "history",
+            "type": "history",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "permissions",
+            "type": "permissions",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "user",
+            "type": "user",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "kv_tables": {},
+    "ricardian_clauses": [],
+    "variants": [],
+    "action_results": []
+}

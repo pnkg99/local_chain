@@ -90,7 +90,7 @@
                     "type": "symbol"
                 },
                 {
-                    "name": "ram_payer",
+                    "name": "mem_payer",
                     "type": "name"
                 }
             ]

@@ -23,36 +23,12 @@
             ]
         },
         {
-            "name": "account_activity",
-            "base": "",
-            "fields": [
-                {
-                    "name": "owner",
-                    "type": "name"
-                },
-                {
-                    "name": "is_active_prod",
-                    "type": "bool"
-                }
-            ]
-        },
-        {
             "name": "activate",
             "base": "",
             "fields": [
                 {
                     "name": "feature_digest",
                     "type": "checksum256"
-                }
-            ]
-        },
-        {
-            "name": "actprod",
-            "base": "",
-            "fields": [
-                {
-                    "name": "master",
-                    "type": "name"
                 }
             ]
         },
@@ -69,8 +45,18 @@
                     "type": "name"
                 },
                 {
-                    "name": "bytes",
-                    "type": "int64"
+                    "name": "quant",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "approve",
+            "base": "",
+            "fields": [
+                {
+                    "name": "master",
+                    "type": "name"
                 }
             ]
         },
@@ -93,6 +79,28 @@
                 {
                     "name": "waits",
                     "type": "wait_weight[]"
+                }
+            ]
+        },
+        {
+            "name": "bind",
+            "base": "",
+            "fields": [
+                {
+                    "name": "master",
+                    "type": "name"
+                },
+                {
+                    "name": "master_key",
+                    "type": "public_key"
+                },
+                {
+                    "name": "url",
+                    "type": "string"
+                },
+                {
+                    "name": "location",
+                    "type": "uint16"
                 }
             ]
         },
@@ -223,20 +231,30 @@
             ]
         },
         {
-            "name": "buyrambytes",
+            "name": "buy",
             "base": "",
             "fields": [
                 {
-                    "name": "payer",
+                    "name": "owner",
                     "type": "name"
                 },
                 {
-                    "name": "receiver",
-                    "type": "name"
+                    "name": "quant",
+                    "type": "asset"
+                }
+            ]
+        },
+        {
+            "name": "byte_market",
+            "base": "",
+            "fields": [
+                {
+                    "name": "supply",
+                    "type": "asset"
                 },
                 {
-                    "name": "bytes",
-                    "type": "uint32"
+                    "name": "memory",
+                    "type": "connector"
                 }
             ]
         },
@@ -255,6 +273,16 @@
             ]
         },
         {
+            "name": "claimreward",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                }
+            ]
+        },
+        {
             "name": "connector",
             "base": "",
             "fields": [
@@ -265,16 +293,6 @@
                 {
                     "name": "weight",
                     "type": "float64"
-                }
-            ]
-        },
-        {
-            "name": "deactprod",
-            "base": "",
-            "fields": [
-                {
-                    "name": "master",
-                    "type": "name"
                 }
             ]
         },
@@ -293,54 +311,6 @@
             ]
         },
         {
-            "name": "delegatebw",
-            "base": "",
-            "fields": [
-                {
-                    "name": "from",
-                    "type": "name"
-                },
-                {
-                    "name": "receiver",
-                    "type": "name"
-                },
-                {
-                    "name": "stake_net_quantity",
-                    "type": "asset"
-                },
-                {
-                    "name": "stake_cpu_quantity",
-                    "type": "asset"
-                },
-                {
-                    "name": "transfer",
-                    "type": "bool"
-                }
-            ]
-        },
-        {
-            "name": "delegated_bandwidth",
-            "base": "",
-            "fields": [
-                {
-                    "name": "from",
-                    "type": "name"
-                },
-                {
-                    "name": "to",
-                    "type": "name"
-                },
-                {
-                    "name": "net_weight",
-                    "type": "asset"
-                },
-                {
-                    "name": "cpu_weight",
-                    "type": "asset"
-                }
-            ]
-        },
-        {
             "name": "deleteauth",
             "base": "",
             "fields": [
@@ -351,24 +321,6 @@
                 {
                     "name": "permission",
                     "type": "name"
-                }
-            ]
-        },
-        {
-            "name": "exchange_state",
-            "base": "",
-            "fields": [
-                {
-                    "name": "supply",
-                    "type": "asset"
-                },
-                {
-                    "name": "base",
-                    "type": "connector"
-                },
-                {
-                    "name": "quote",
-                    "type": "connector"
                 }
             ]
         },
@@ -423,72 +375,82 @@
             "base": "",
             "fields": [
                 {
-                    "name": "new_ram_per_block",
-                    "type": "uint16"
-                },
-                {
-                    "name": "last_ram_increase",
-                    "type": "block_timestamp_type"
-                },
-                {
-                    "name": "last_block_num",
-                    "type": "block_timestamp_type"
-                },
-                {
-                    "name": "revision",
-                    "type": "uint8"
-                },
-                {
-                    "name": "masters_size",
-                    "type": "uint16"
-                },
-                {
-                    "name": "schedule_size",
-                    "type": "uint16"
-                },
-                {
-                    "name": "last_produced_block_time",
-                    "type": "uint64"
-                },
-                {
-                    "name": "last_schedule_update_milis",
-                    "type": "uint64"
-                },
-                {
-                    "name": "round_number",
+                    "name": "total_unpaid_blocks",
                     "type": "uint64"
                 },
                 {
                     "name": "total_stake",
                     "type": "asset"
-                }
-            ]
-        },
-        {
-            "name": "inery_global_state3",
-            "base": "",
-            "fields": [
+                },
                 {
-                    "name": "last_vpay_state_update",
+                    "name": "master_block_num",
+                    "type": "uint64"
+                },
+                {
+                    "name": "master_block_time",
+                    "type": "block_timestamp_type"
+                },
+                {
+                    "name": "new_masters",
+                    "type": "uint64"
+                },
+                {
+                    "name": "free_stages",
+                    "type": "uint64[]"
+                },
+                {
+                    "name": "current_delegate",
+                    "type": "name[]"
+                },
+                {
+                    "name": "cycle_number",
+                    "type": "uint64"
+                },
+                {
+                    "name": "active_masters",
+                    "type": "uint64"
+                },
+                {
+                    "name": "leading_delegate",
+                    "type": "uint64"
+                },
+                {
+                    "name": "masters_per_delegate",
+                    "type": "uint16"
+                },
+                {
+                    "name": "current_delegate_num",
+                    "type": "uint64"
+                },
+                {
+                    "name": "next_delegate_time",
                     "type": "time_point"
-                },
-                {
-                    "name": "total_vpay_share_change_rate",
-                    "type": "float64"
                 }
             ]
         },
         {
-            "name": "inery_global_state4",
+            "name": "inery_memory_state",
             "base": "",
             "fields": [
                 {
-                    "name": "continuous_rate",
-                    "type": "float64"
+                    "name": "max_mem_size",
+                    "type": "uint64"
                 },
                 {
-                    "name": "inflation_pay_factor",
-                    "type": "int64"
+                    "name": "mem_bytes_reserved",
+                    "type": "uint64"
+                },
+                {
+                    "name": "total_mem_stake",
+                    "type": "asset"
+                },
+                {
+                    "name": "total_mem_supply",
+                    "type": "asset"
+                },
+                {
+                    "name": "total_mem_tokens",
+                    "type": "asset"
                 }
             ]
         },
@@ -555,10 +517,6 @@
                     "type": "public_key"
                 },
                 {
-                    "name": "is_active",
-                    "type": "uint64"
-                },
-                {
                     "name": "url",
                     "type": "string"
                 },
@@ -571,30 +529,36 @@
                     "type": "time_point"
                 },
                 {
+                    "name": "approved_time",
+                    "type": "time_point"
+                },
+                {
                     "name": "location",
                     "type": "uint16"
                 },
                 {
-                    "name": "last_produced_block_time",
+                    "name": "tokens_claim",
+                    "type": "asset"
+                },
+                {
+                    "name": "activity",
                     "type": "uint64"
                 },
                 {
-                    "name": "last_schedule_entrance_time",
+                    "name": "stage",
                     "type": "uint64"
+                },
+                {
+                    "name": "lpb",
+                    "type": "int64"
+                },
+                {
+                    "name": "lpb_time",
+                    "type": "time_point"
                 },
                 {
                     "name": "master_authority",
                     "type": "block_signing_authority$"
-                }
-            ]
-        },
-        {
-            "name": "master_info2",
-            "base": "",
-            "fields": [
-                {
-                    "name": "owner",
-                    "type": "name"
                 }
             ]
         },
@@ -701,17 +665,7 @@
             ]
         },
         {
-            "name": "refund",
-            "base": "",
-            "fields": [
-                {
-                    "name": "owner",
-                    "type": "name"
-                }
-            ]
-        },
-        {
-            "name": "refund_request",
+            "name": "sell",
             "base": "",
             "fields": [
                 {
@@ -719,70 +673,8 @@
                     "type": "name"
                 },
                 {
-                    "name": "request_time",
-                    "type": "time_point_sec"
-                },
-                {
-                    "name": "net_amount",
+                    "name": "quant",
                     "type": "asset"
-                },
-                {
-                    "name": "cpu_amount",
-                    "type": "asset"
-                }
-            ]
-        },
-        {
-            "name": "regmaster",
-            "base": "",
-            "fields": [
-                {
-                    "name": "master",
-                    "type": "name"
-                },
-                {
-                    "name": "master_key",
-                    "type": "public_key"
-                },
-                {
-                    "name": "url",
-                    "type": "string"
-                },
-                {
-                    "name": "location",
-                    "type": "uint16"
-                }
-            ]
-        },
-        {
-            "name": "regmaster2",
-            "base": "",
-            "fields": [
-                {
-                    "name": "master",
-                    "type": "name"
-                },
-                {
-                    "name": "master_authority",
-                    "type": "block_signing_authority"
-                },
-                {
-                    "name": "url",
-                    "type": "string"
-                },
-                {
-                    "name": "location",
-                    "type": "uint16"
-                }
-            ]
-        },
-        {
-            "name": "rmvmaster",
-            "base": "",
-            "fields": [
-                {
-                    "name": "master",
-                    "type": "name"
                 }
             ]
         },
@@ -815,6 +707,20 @@
             ]
         },
         {
+            "name": "setacctmem",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "mem_bytes",
+                    "type": "int64?"
+                }
+            ]
+        },
+        {
             "name": "setacctnet",
             "base": "",
             "fields": [
@@ -825,42 +731,6 @@
                 {
                     "name": "net_weight",
                     "type": "int64?"
-                }
-            ]
-        },
-        {
-            "name": "setacctram",
-            "base": "",
-            "fields": [
-                {
-                    "name": "account",
-                    "type": "name"
-                },
-                {
-                    "name": "ram_bytes",
-                    "type": "int64?"
-                }
-            ]
-        },
-        {
-            "name": "setalimits",
-            "base": "",
-            "fields": [
-                {
-                    "name": "account",
-                    "type": "name"
-                },
-                {
-                    "name": "ram_bytes",
-                    "type": "int64"
-                },
-                {
-                    "name": "net_weight",
-                    "type": "int64"
-                },
-                {
-                    "name": "cpu_weight",
-                    "type": "int64"
                 }
             ]
         },
@@ -887,16 +757,12 @@
             ]
         },
         {
-            "name": "setinflation",
+            "name": "setmem",
             "base": "",
             "fields": [
                 {
-                    "name": "annual_rate",
-                    "type": "int64"
-                },
-                {
-                    "name": "inflation_pay_factor",
-                    "type": "int64"
+                    "name": "max_mem_size",
+                    "type": "uint64"
                 }
             ]
         },
@@ -925,22 +791,16 @@
             ]
         },
         {
-            "name": "setram",
+            "name": "stages_info",
             "base": "",
             "fields": [
                 {
-                    "name": "max_ram_size",
+                    "name": "stage",
                     "type": "uint64"
-                }
-            ]
-        },
-        {
-            "name": "setramrate",
-            "base": "",
-            "fields": [
+                },
                 {
-                    "name": "bytes_per_block",
-                    "type": "uint16"
+                    "name": "masters",
+                    "type": "name[]"
                 }
             ]
         },
@@ -949,38 +809,32 @@
             "base": "",
             "fields": [
                 {
-                    "name": "from",
+                    "name": "owner",
                     "type": "name"
                 },
                 {
-                    "name": "to",
-                    "type": "name"
-                },
-                {
-                    "name": "quantity",
+                    "name": "INR_stake",
                     "type": "asset"
                 }
             ]
         },
         {
-            "name": "undelegatebw",
+            "name": "unapprove",
             "base": "",
             "fields": [
                 {
-                    "name": "from",
+                    "name": "master",
                     "type": "name"
-                },
+                }
+            ]
+        },
+        {
+            "name": "unbind",
+            "base": "",
+            "fields": [
                 {
-                    "name": "receiver",
+                    "name": "master",
                     "type": "name"
-                },
-                {
-                    "name": "unstake_net_quantity",
-                    "type": "asset"
-                },
-                {
-                    "name": "unstake_cpu_quantity",
-                    "type": "asset"
                 }
             ]
         },
@@ -1003,16 +857,6 @@
             ]
         },
         {
-            "name": "unregmaster",
-            "base": "",
-            "fields": [
-                {
-                    "name": "master",
-                    "type": "name"
-                }
-            ]
-        },
-        {
             "name": "unstake",
             "base": "",
             "fields": [
@@ -1021,7 +865,7 @@
                     "type": "name"
                 },
                 {
-                    "name": "quantity",
+                    "name": "INR_unstake",
                     "type": "asset"
                 }
             ]
@@ -1049,16 +893,6 @@
             ]
         },
         {
-            "name": "updtrevision",
-            "base": "",
-            "fields": [
-                {
-                    "name": "revision",
-                    "type": "uint8"
-                }
-            ]
-        },
-        {
             "name": "user_resources",
             "base": "",
             "fields": [
@@ -1067,20 +901,16 @@
                     "type": "name"
                 },
                 {
-                    "name": "net_weight",
-                    "type": "asset"
-                },
-                {
-                    "name": "cpu_weight",
-                    "type": "asset"
-                },
-                {
-                    "name": "ram_bytes",
+                    "name": "mem_bytes",
                     "type": "int64"
                 },
                 {
                     "name": "inr_stake",
                     "type": "asset"
+                },
+                {
+                    "name": "last_mem_buy",
+                    "type": "time_point"
                 }
             ]
         },
@@ -1106,18 +936,23 @@
             "ricardian_contract": ""
         },
         {
-            "name": "actprod",
-            "type": "actprod",
-            "ricardian_contract": ""
-        },
-        {
             "name": "allocate",
             "type": "allocate",
             "ricardian_contract": ""
         },
         {
-            "name": "buyrambytes",
-            "type": "buyrambytes",
+            "name": "approve",
+            "type": "approve",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "bind",
+            "type": "bind",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "buy",
+            "type": "buy",
             "ricardian_contract": ""
         },
         {
@@ -1126,18 +961,13 @@
             "ricardian_contract": ""
         },
         {
-            "name": "deactprod",
-            "type": "deactprod",
+            "name": "claimreward",
+            "type": "claimreward",
             "ricardian_contract": ""
         },
         {
             "name": "deallocate",
             "type": "deallocate",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "delegatebw",
-            "type": "delegatebw",
             "ricardian_contract": ""
         },
         {
@@ -1171,23 +1001,8 @@
             "ricardian_contract": ""
         },
         {
-            "name": "refund",
-            "type": "refund",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "regmaster",
-            "type": "regmaster",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "regmaster2",
-            "type": "regmaster2",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "rmvmaster",
-            "type": "rmvmaster",
+            "name": "sell",
+            "type": "sell",
             "ricardian_contract": ""
         },
         {
@@ -1201,18 +1016,13 @@
             "ricardian_contract": ""
         },
         {
+            "name": "setacctmem",
+            "type": "setacctmem",
+            "ricardian_contract": ""
+        },
+        {
             "name": "setacctnet",
             "type": "setacctnet",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "setacctram",
-            "type": "setacctram",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "setalimits",
-            "type": "setalimits",
             "ricardian_contract": ""
         },
         {
@@ -1221,8 +1031,8 @@
             "ricardian_contract": ""
         },
         {
-            "name": "setinflation",
-            "type": "setinflation",
+            "name": "setmem",
+            "type": "setmem",
             "ricardian_contract": ""
         },
         {
@@ -1236,33 +1046,23 @@
             "ricardian_contract": ""
         },
         {
-            "name": "setram",
-            "type": "setram",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "setramrate",
-            "type": "setramrate",
-            "ricardian_contract": ""
-        },
-        {
             "name": "stake",
             "type": "stake",
             "ricardian_contract": ""
         },
         {
-            "name": "undelegatebw",
-            "type": "undelegatebw",
+            "name": "unapprove",
+            "type": "unapprove",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "unbind",
+            "type": "unbind",
             "ricardian_contract": ""
         },
         {
             "name": "unlinkauth",
             "type": "unlinkauth",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "unregmaster",
-            "type": "unregmaster",
             "ricardian_contract": ""
         },
         {
@@ -1273,11 +1073,6 @@
         {
             "name": "updateauth",
             "type": "updateauth",
-            "ricardian_contract": ""
-        },
-        {
-            "name": "updtrevision",
-            "type": "updtrevision",
             "ricardian_contract": ""
         }
     ],
@@ -1290,15 +1085,8 @@
             "key_types": []
         },
         {
-            "name": "accountsact",
-            "type": "account_activity",
-            "index_type": "i64",
-            "key_names": [],
-            "key_types": []
-        },
-        {
-            "name": "delband",
-            "type": "delegated_bandwidth",
+            "name": "bytemarket",
+            "type": "byte_market",
             "index_type": "i64",
             "key_names": [],
             "key_types": []
@@ -1318,20 +1106,6 @@
             "key_types": []
         },
         {
-            "name": "global3",
-            "type": "inery_global_state3",
-            "index_type": "i64",
-            "key_names": [],
-            "key_types": []
-        },
-        {
-            "name": "global4",
-            "type": "inery_global_state4",
-            "index_type": "i64",
-            "key_names": [],
-            "key_types": []
-        },
-        {
             "name": "masters",
             "type": "master_info",
             "index_type": "i64",
@@ -1339,22 +1113,15 @@
             "key_types": []
         },
         {
-            "name": "masters2",
-            "type": "master_info2",
+            "name": "memory",
+            "type": "inery_memory_state",
             "index_type": "i64",
             "key_names": [],
             "key_types": []
         },
         {
-            "name": "rammarket",
-            "type": "exchange_state",
-            "index_type": "i64",
-            "key_names": [],
-            "key_types": []
-        },
-        {
-            "name": "refunds",
-            "type": "refund_request",
+            "name": "stages",
+            "type": "stages_info",
             "index_type": "i64",
             "key_names": [],
             "key_types": []

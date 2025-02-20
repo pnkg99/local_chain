@@ -32,7 +32,7 @@ def get_ubuntu_version():
 
 
 class TestChain:
-    def __init__(self) -> None:
+    def __init__(self) :
         self.path = os.getcwd()
         self.config_path = os.path.join(self.path, "Config")
         self.gen_config = self.read_file(os.path.join(self.config_path, "general.json"), True)
@@ -40,6 +40,18 @@ class TestChain:
         self.server_url = self.gen_config["server_url"]
         
         self.data_path = os.path.join(self.path, "Data")
+        
+        self.gui_plugins = [
+            {"id":1,"required":0,"plugin_name":"Encryption","plugin_desc":"When active this plugin makes all entry data pushed to blockchain to be encrypted with private key"},          
+            {"id":2,"required":0,"plugin_name":"Backup","plugin_desc":"When active this plugin can be used from setings to create local json copy of desired datasets"},    
+            {"id":3,"required":0,"plugin_name":"Replica sync","plugin_desc":"When active this plugin execute database operation on local chain and resync with main network once gui gets online back"},             
+            {"id":4,"required":0,"plugin_name":"MongoDB proxy","plugin_desc":"When active MongoDB plugin enable mongo query, CLI, backup on inery datasets"},
+            {"id":5,"required":1,"plugin_name":"Export data","plugin_desc":"Builtin plugin for exporting selected data into desired format"},
+            {"id":7,"required":1,"plugin_name":"Hot Key","plugin_desc":"When active plugin enables private keys to be saved in browser cache for session to enforce fast interagation with data"},          
+            {"id":8,"required":0,"plugin_name":"Redis Import","plugin_desc":"The IneryDB Redis import plugin facilitates the smooth transfer of data from Redis to Inery blockchain."},  
+            {"id":9,"required":0,"plugin_name":"Explorer Lite","plugin_desc":"Widget for Dashboard page for monitoring blockchain network state with block, transaction and action details query"},              
+            {"id":10,"required":0,"plugin_name":"Mongo Import","plugin_desc":"The IneryDB Mongo import plugin facilitates the smooth transfer of data from Mongo database to Inery blockchain."}]
+        
         self.genesis_path = os.path.join(self.data_path, "genesis")
         
         self.masters = self.read_file(os.path.join(self.config_path, "masters.json"), True)
@@ -77,6 +89,9 @@ class TestChain:
         self.boot_path = os.path.join(self.contract_path, "inery.boot")
         self.system_path = os.path.join(self.contract_path, "inery.system")
         self.token_path = os.path.join(self.contract_path, "inery.token")
+        self.valuecontracts_path = os.path.join(self.contract_path, "value.contracts")
+        self.gui_contract_path = os.path.join(self.valuecontracts_path, "inerygui")
+        self.k2_contract_path = os.path.join(self.valuecontracts_path, "k2ultra")
 
         self.features = ["825ee6288fb1373eab1b5187ec2f04f6eacb39cb3a97f356a07c91622dd61d16",
                         "c3a6138c5061cf291310887c0b5c71fcaffeab90d5deb50d3b9e687cead45071",
@@ -235,7 +250,7 @@ class TestChain:
         self.run_genesis()
         #self.run_masters()
 
-    def run_genesis(self) -> None:
+    def run_genesis(self) :
         
         os.makedirs(self.genesis_path, exist_ok=True)
         port = self._get_port()
@@ -263,7 +278,6 @@ class TestChain:
                 if "transaction executed locally" in error or "the new code is the same as the existing" in error :
                     break
                 if error:
-                    print(error)
                     i+=1
                     continue
                 else:
@@ -284,23 +298,42 @@ class TestChain:
                 error = str(result[1])
                 i+=1
                 if "transaction executed locally" in error or "the new code is the same as the existing" in error :
+                    print(str(result[0]))
                     break
                 if error:
                     print(error)
                     continue
                 else:
+                    print(str(result[0]))
                     break
 
             subprocess.Popen([self.inery_cline_path, "set", "contract", "inery.token", f"{self.token_path}"]).communicate()[0]
-            # 268435456000 INR = 256GB u bajtovima 
-            subprocess.Popen([self.inery_cline_path, "push", "action", "inery.token", "create", f"[\"inery\", \"268435456000.0000 INR\"]", "-p", "inery.token@active"]).communicate()[0]
-            ## Issue 128GB in INR to inery account
-            subprocess.Popen([self.inery_cline_path, "push", "action", "inery.token", "issue", f"[\"inery\", \"134217728000.0000 INR\", \"Issuing tokens for inery account\"]", "-p", "inery@active" ]).communicate()[0]
+
+            subprocess.Popen([self.inery_cline_path, "push", "action", "inery.token", "create", f"[\"inery\", \"800000000.000000 INR\"]", "-p", "inery@active"]).communicate()[0]
+            subprocess.Popen([self.inery_cline_path, "push", "action", "inery.token", "issue", f"[\"inery\", \"432000000.000000 INR\", \"Issuing tokens for inery account\"]", "-p", "inery@active" ]).communicate()[0]
+
+            subprocess.Popen([self.inery_cline_path, "push", "action", "inery.token", "create", f"[\"inery\", \"128000000000 BYTE\"]", "-p", "inery@active"]).communicate()[0]
+            subprocess.Popen([self.inery_cline_path, "push", "action", "inery.token", "issue", f"[\"inery\", \"38000000000 BYTE\", \"Issuing BYTE for inery account\"]", "-p", "inery@active" ]).communicate()[0]
+
+            subprocess.Popen([self.inery_cline_path, "transfer", "inery", "inery.mem", "100000000 INR"]).communicate()[0]
+
+            subprocess.Popen([self.inery_cline_path, "transfer", "inery", "creator", "10000000000 BYTE"]).communicate()[0]
+            subprocess.Popen([self.inery_cline_path, "transfer", "inery", "creator", "100000000 INR"]).communicate()[0]
+
             subprocess.Popen([self.inery_cline_path, "push", "action", "inery", "init", f"[\"0\", \"4,INR\"]", "-p", "inery@active"]).communicate()[0]
+            
+            subprocess.Popen([self.inery_cline_path, "set", "contract", "inerygui", f"{self.gui_contract_path}"]).communicate()[0]            
+            subprocess.Popen([self.inery_cline_path, "set", "contract", "k2ultra", f"{self.k2_contract_path}"]).communicate()[0]
+
+            for plugin in self.gui_plugins :
+                id = plugin["id"]
+                name = plugin["plugin_name"]
+                description = plugin["plugin_desc"]
+                req = plugin["required"]
+                subprocess.Popen([self.inery_cline_path, "push", "action", "inerygui", "addpluging", f"[\"{id}\", \"{name}\", \"{description}\", \"{req}\"]", "-p", "inerygui@active"]).communicate()[0]
+
+
             print("Contracts initilized")
-            ## Transfer 64GB in INR to creator account
-            subprocess.Popen([self.inery_cline_path, "system", "opendb", "inery", "creator", self.dev_keys["PUBLIC_KEY"]]).communicate()[0]
-            subprocess.Popen([self.inery_cline_path, "transfer", "inery", "creator", "67108864000 INR"]).communicate()[0]
             time.sleep(1)
             
         except Exception as error:
@@ -332,7 +365,7 @@ class TestChain:
                 master_name = master["NAME"]
                 subprocess.run([self.inery_cline_path, "transfer", "inery", master_name, "50000 INR"])
                 subprocess.run([self.inery_cline_path, "system", "stake", "inery", master_name , "50000 INR"])
-                subprocess.run([self.inery_cline_path, "master", "regmaster", master_name , master["PUBLIC_KEY"], f"{self.server_url}{port}"])
+                subprocess.run([self.inery_cline_path, "master", "bind", master_name , master["PUBLIC_KEY"], f"{self.server_url}{port}"])
                 port+=1
             except Exception as ex:
                 print(ex)

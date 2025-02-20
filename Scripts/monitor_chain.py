@@ -25,7 +25,7 @@ class ChainMonitor:
             return None
     
     def get_table(self, contract, scope, table):
-        url = f"{self.base_url}/get_table_rows"
+        url = f"{self.base_url}/get_composition_rows"
         data = {
             "json": True,
             "code": contract,
@@ -117,4 +117,8 @@ class ChainMonitor:
 
 # Example usage
 monitor = ChainMonitor()
-monitor.show_production()
+a = monitor.get_table("inerygui", "inerygui", "global")
+print(a)
+b = monitor.get_table_by_scope("inery", "abihash")
+print(b)
+#monitor.show_production()

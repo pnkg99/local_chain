@@ -50,12 +50,12 @@
         "PUBLIC_KEY": "INE6eYLJ5ozm25dchmjGCZRDMKxcbDafjayCv47RJSgadaektxNfT"
     },
     {
-        "NAME": "inery.rex",
+        "NAME": "creator",
         "PRIVATE_KEY": "5J5DAVQbhVjBSbJoB2QeMFKJ81ebG6CxeTNaoEPFLjHFJJGeM29",
         "PUBLIC_KEY": "INE6RYXNPUnn7YLReeuWF8FMR76oaAMVNmKNnzJR82wkbkYyqGUvC"
     },
     {
-        "NAME": "inery.reserv",
+        "NAME": "inery.mem",
         "PRIVATE_KEY": "5HsZTp2wNBX8Uhd6qBgNYUa7BSodh8uUeUXTNTqpWExqcoU5BPa",
         "PUBLIC_KEY": "INE8Xu9GD1MdqdtJ8Ba9TpA25yKbK45kmyDpt2rfepiavnRii6nZg"
     },

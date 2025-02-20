@@ -1,1 +1,0 @@
-/petar/novoting/inery.cdt/build/bin/inery-ld  CMakeFiles/inery.token.dir/src/inery.token.cpp.obj -o inery.token.wasm 
