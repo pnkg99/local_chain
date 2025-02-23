@@ -127,8 +127,8 @@ class TestChain:
             print(f"{binary} is available at {path}.")
         else: 
             print(f"No global {binary} binaries found.")
-            # self.inery_nodine_path = os.path.join(self.inery_bin_path, "nodine")
-            # self.inery_cline_path = os.path.join(self.inery_bin_path, "cline")
+            self.inery_nodine_path = os.path.join(self.inery_bin_path, "nodine")
+            self.inery_cline_path = os.path.join(self.inery_bin_path, "cline")
             
             with open(self.bashrc_path, 'r') as bashrc:
                 bashrc_content = bashrc.read()
